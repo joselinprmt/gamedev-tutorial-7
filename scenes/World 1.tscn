@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://lg01wjyntrsd"]
+
+[ext_resource type="PackedScene" uid="uid://dmgh8se3dw4hv" path="res://scenes/ObjLamp.tscn" id="1_tickl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csfbw"]
+albedo_color = Color(0.139706, 0.416644, 0.463611, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o834x"]
+albedo_color = Color(0.141176, 0.415686, 0.462745, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm7k5"]
+albedo_color = Color(0.141176, 0.415686, 0.462745, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwjbs"]
+albedo_color = Color(0.37421, 0.39285, 0.165336, 1)
+
+[node name="World 1" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 7.73169)
+use_collision = true
+flip_faces = true
+size = Vector3(15, 10, 44.5366)
+material = SubResource("StandardMaterial3D_csfbw")
+
+[node name="Room 2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4178, 5, 30.479)
+use_collision = true
+flip_faces = true
+size = Vector3(109.908, 10, 28.9053)
+material = SubResource("StandardMaterial3D_o834x")
+
+[node name="Room 3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5461, -4.85272, 30.479)
+use_collision = true
+flip_faces = true
+size = Vector3(23.4997, 29.6168, 28.9053)
+material = SubResource("StandardMaterial3D_wm7k5")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.2872, -1.70719, 30.2976)
+use_collision = true
+size = Vector3(5, 3, 5)
+material = SubResource("StandardMaterial3D_mwjbs")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.0793, -1.5848, 30.3191)
+use_collision = true
+size = Vector3(4, 3, 5)
+material = SubResource("StandardMaterial3D_mwjbs")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.3457, -1.70267, 30.3191)
+use_collision = true
+size = Vector3(4, 3, 5)
+material = SubResource("StandardMaterial3D_mwjbs")
+
+[node name="Lamps" type="Node3D" parent="."]
+
+[node name="ObjLamp6" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, -10)
+
+[node name="ObjLamp5" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 10)
+
+[node name="ObjLamp4" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, -10)
+
+[node name="ObjLamp2" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 10)
+
+[node name="ObjLamp3" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.998, 0.015, 43)
+
+[node name="ObjLamp7" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.015, 43)
+
+[node name="ObjLamp8" parent="Lamps" instance=ExtResource("1_tickl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.015, 18)
