@@ -4,4 +4,7 @@ extends Area3D
 
 func _on_goal_area_body_entered(body: Node3D) -> void:
 	if body.get_name() == "Player":
-		get_tree().change_scene_to_file(str("res://scenes/" + sceneName + ".tscn"))
+		call_deferred("change_scene")
+
+func change_scene():
+	get_tree().change_scene_to_file("res://scenes/" + sceneName + ".tscn")
