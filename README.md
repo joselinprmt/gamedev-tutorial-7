@@ -1,7 +1,6 @@
 # Tutorial 7: Basic 3D Game Mechanics & Level Design 🎮
 
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/41a94e9e-ff60-4844-aff9-8eac52924692)
 
 ## Penambahan yang dilakukan
 
